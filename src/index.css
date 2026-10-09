@@ -1,0 +1,145 @@
+@import "tailwindcss";
+
+@theme {
+  --color-henna-950: #0b1a0f;
+  --color-henna-900: #14331d;
+  --color-henna-800: #1b4327;
+  --color-henna-700: #255835;
+  --color-henna-600: #337446;
+  --color-henna-500: #42925a;
+  --color-henna-400: #6cae80;
+  --color-henna-300: #9bcba9;
+  --color-henna-200: #c5e4cf;
+  --color-henna-100: #e2f2e7;
+  --color-henna-50: #f1f8f3;
+
+  --color-copper-950: #2f1305;
+  --color-copper-900: #522209;
+  --color-copper-800: #743310;
+  --color-copper-700: #88451b;
+  --color-copper-600: #a85421;
+  --color-copper-500: #c9692c;
+  --color-copper-400: #e0884d;
+  --color-copper-300: #f0ac7e;
+  --color-copper-200: #fad0b3;
+  --color-copper-100: #fde8d9;
+  --color-copper-50: #fdf5ef;
+
+  --color-gold-950: #2b1d03;
+  --color-gold-900: #4f3607;
+  --color-gold-800: #75510c;
+  --color-gold-700: #9c6c10;
+  --color-gold-600: #b5893d;
+  --color-gold-500: #c59b4e;
+  --color-gold-400: #dbb56e;
+  --color-gold-300: #edd096;
+  --color-gold-200: #f6e4bf;
+  --color-gold-100: #fbf2dc;
+  --color-gold-50: #fdfaf2;
+
+  --color-ivory: #faf6ee;
+
+  /* Theme rose to Henna Green so all existing rose elements match the primary logo color */
+  --color-rose-950: #0b1a0f;
+  --color-rose-900: #14331d;
+  --color-rose-800: #1b4327;
+  --color-rose-700: #255835;
+  --color-rose-600: #337446;
+  --color-rose-500: #88451b;
+  --color-rose-400: #a85421;
+  --color-rose-300: #c59b4e;
+  --color-rose-200: #c5e4cf;
+  --color-rose-100: #e2f2e7;
+  --color-rose-50: #f1f8f3;
+
+  /* Refine amber to the Royal Gold & Copper tone of the logo */
+  --color-amber-50: #fdfaf2;
+  --color-amber-100: #fbf2dc;
+  --color-amber-200: #f6e4bf;
+  --color-amber-300: #edd096;
+  --color-amber-400: #dbb56e;
+  --color-amber-500: #c59b4e;
+  --color-amber-600: #b5893d;
+  --color-amber-700: #88451b;
+  --color-amber-800: #743310;
+  --color-amber-900: #522209;
+  --color-amber-950: #2f1305;
+}
+
+@layer base {
+  :root {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #faf6ee;
+    color: #273029;
+  }
+}
+
+.font-heading {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-sans-custom {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+.font-hindi {
+  font-family: 'Noto Sans Devanagari', 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Custom festive subtle mandala background patterns tuned to Henna Green & Royal Gold */
+.mandala-bg {
+  background-color: #faf6ee;
+  background-image: radial-gradient(#c59b4e 0.75px, transparent 0.75px), radial-gradient(#1b4327 0.75px, #faf6ee 0.75px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(229, 215, 195, 0.85);
+}
+
+.glass-dark {
+  background: rgba(15, 34, 22, 0.90);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(197, 155, 78, 0.25);
+}
+
+/* Custom scrollbar matching Henna & Gold */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f8f4eb;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c59b4e;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1b4327;
+}
+
+/* Animations */
+@keyframes pulseSubtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.92; transform: scale(1.02); }
+}
+
+.animate-pulse-subtle {
+  animation: pulseSubtle 3s infinite ease-in-out;
+}
