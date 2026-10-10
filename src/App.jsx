@@ -9,26 +9,26 @@ import { BookingProvider } from './context/BookingContext';
 import Navbar from './components/common/Navbar';
 import Footer from './components/common/Footer';
 
-// Pages
-import Home from './pages/Home';
-import SearchArtists from './pages/SearchArtists';
-import CompareArtists from './pages/CompareArtists';
-import ArtistDetails from './pages/ArtistDetails';
-import PriceCalculatorPage from './pages/PriceCalculatorPage';
-import EventPlannerPage from './pages/EventPlannerPage';
-import BookingFormPage from './pages/BookingFormPage';
-import BookingConfirmationPage from './pages/BookingConfirmationPage';
-import BookingTrackerPage from './pages/BookingTrackerPage';
-import BackupArtistPage from './pages/BackupArtistPage';
-import CustomerDashboard from './pages/CustomerDashboard';
-import ArtistDashboard from './pages/ArtistDashboard';
-import AdminDashboard from './pages/AdminDashboard';
-import HelpPage from './pages/HelpPage';
-import AuthPage from './pages/AuthPage';
-import AboutPage from './pages/AboutPage';
-import PhotosPage from './pages/PhotosPage';
-import VideoPage from './pages/VideoPage';
-import NotFoundPage from './pages/NotFoundPage';
+// Views
+import Home from './views/Home';
+import SearchArtists from './views/SearchArtists';
+import CompareArtists from './views/CompareArtists';
+import ArtistDetails from './views/ArtistDetails';
+import PriceCalculatorPage from './views/PriceCalculatorPage';
+import EventPlannerPage from './views/EventPlannerPage';
+import BookingFormPage from './views/BookingFormPage';
+import BookingConfirmationPage from './views/BookingConfirmationPage';
+import BookingTrackerPage from './views/BookingTrackerPage';
+import BackupArtistPage from './views/BackupArtistPage';
+import CustomerDashboard from './views/CustomerDashboard';
+import ArtistDashboard from './views/ArtistDashboard';
+import AdminDashboard from './views/AdminDashboard';
+import HelpPage from './views/HelpPage';
+import AuthPage from './views/AuthPage';
+import AboutPage from './views/AboutPage';
+import PhotosPage from './views/PhotosPage';
+import VideoPage from './views/VideoPage';
+import NotFoundPage from './views/NotFoundPage';
 
 // Scroll to top helper on route navigation
 function ScrollToTop() {

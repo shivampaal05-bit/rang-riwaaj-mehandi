@@ -94,10 +94,14 @@ export default function Navbar() {
 
       {/* Main Navigation */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 h-18 flex items-center justify-between gap-4">
-        {/* Brand Logo */}
+        {/* Brand Logo & Name */}
         <Link href="/" className="flex items-center gap-3 shrink-0 group">
-          <div className="w-11 h-11 rounded-2xl bg-gradient-to-br from-[#54250a] via-[#88451b] to-[#c59b4e] flex items-center justify-center shadow-md border border-[#c59b4e]/40 group-hover:scale-105 transition-transform">
-            <Sparkles className="w-6 h-6 text-amber-100 animate-spin-slow" />
+          <div className="w-11 h-11 rounded-full p-0.5 bg-gradient-to-tr from-[#b5893d] via-[#f1dcac] to-[#88451b] shadow-md ring-1 ring-[#c59b4e]/40 group-hover:scale-105 transition-transform shrink-0 overflow-hidden">
+            <img
+              src="/assets/logo.png"
+              alt="Rang Riwaaz Mehandi Logo"
+              className="w-full h-full object-cover rounded-full bg-[#faf6ee]"
+            />
           </div>
           <div>
             <div className="flex items-center gap-1.5">

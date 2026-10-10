@@ -30,12 +30,11 @@ export default function RangRiwaazLogo({
       className={`relative rounded-full p-0.5 bg-gradient-to-tr from-[#b5893d] via-[#f1dcac] to-[#88451b] shadow-md ring-1 ring-[#c59b4e]/40 transition-transform duration-300 group-hover:scale-105 shrink-0 ${imgSize}`}
     >
       <img
-        src="/images/rang_riwaaz_logo.png"
+        src="/assets/logo.png"
         alt="Rang Riwaaz Mehandi Logo"
         className="w-full h-full object-cover rounded-full bg-[#faf6ee]"
         onError={(e) => {
-          e.currentTarget.style.display = 'none';
-          e.currentTarget.nextElementSibling?.classList.remove('hidden');
+          e.currentTarget.src = '/images/rang_riwaaz_logo.png';
         }}
       />
       {/* Fallback Vector Emblem */}
