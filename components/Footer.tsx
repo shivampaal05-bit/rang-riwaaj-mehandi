@@ -1,8 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
-import { Sparkles, MapPin, Phone, ShieldCheck, Heart } from 'lucide-react';
+import { Sparkles, MapPin, Phone, ShieldCheck, Heart, MessageCircle } from 'lucide-react';
+import InstagramButton from '@/components/InstagramButton';
+import { getWhatsAppUrl, SOCIAL_CONFIG } from '@/lib/social-config';
 
 export default function Footer() {
+  const whatsappUrl = getWhatsAppUrl();
+
   return (
     <footer className="bg-[#1c0e05] text-stone-300 border-t border-[#c59b4e]/30 mt-auto text-left">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
@@ -24,6 +28,11 @@ export default function Footer() {
             <div className="text-xs text-amber-300/90 font-medium flex items-center gap-1.5 pt-1">
               <MapPin className="w-3.5 h-3.5 text-amber-400 shrink-0" />
               <span>Center Hub: Baraipar Mod (Pincode: 273413)</span>
+            </div>
+
+            {/* Follow Us on Instagram Button */}
+            <div className="pt-2">
+              <InstagramButton variant="footer" />
             </div>
           </div>
 
@@ -97,11 +106,20 @@ export default function Footer() {
                 </Link>
               </li>
             </ul>
-            <div className="pt-2 text-xs text-stone-400">
+            <div className="pt-2 text-xs text-stone-400 space-y-1.5">
               <div className="flex items-center gap-2">
                 <Phone className="w-3.5 h-3.5 text-amber-400" />
                 <span>Ops Desk: +91 94500 00100</span>
               </div>
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-emerald-400 hover:text-emerald-300 transition-colors font-medium"
+              >
+                <MessageCircle className="w-3.5 h-3.5 text-[#25D366]" />
+                <span>WhatsApp: +91 87565 49820</span>
+              </a>
             </div>
           </div>
         </div>

@@ -3,6 +3,7 @@ import './globals.css';
 import { MarketplaceProvider } from '@/context/MarketplaceContext';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import FloatingWhatsApp from '@/components/FloatingWhatsApp';
 
 export const metadata: Metadata = {
   title: 'Rang Riwaaz Mehandi | Gorakhpur Commission Marketplace',
@@ -29,6 +30,7 @@ export default function RootLayout({
           <Navbar />
           <main className="flex-1 w-full">{children}</main>
           <Footer />
+          <FloatingWhatsApp />
         </MarketplaceProvider>
       </body>
     </html>

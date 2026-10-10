@@ -18,6 +18,7 @@ import {
 } from 'lucide-react';
 import { useMarketplace } from '@/context/MarketplaceContext';
 import { UserRole } from '@/types/marketplace';
+import InstagramButton from '@/components/InstagramButton';
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -183,6 +184,9 @@ export default function Navbar() {
             </Link>
           )}
 
+          {/* Follow Us on Instagram Header Button */}
+          <InstagramButton variant="header" />
+
           <Link
             href="/auth"
             className="p-2 rounded-xl border border-stone-200 hover:bg-stone-100 text-stone-700 transition-colors"
@@ -194,6 +198,8 @@ export default function Navbar() {
 
         {/* Mobile Menu Button */}
         <div className="flex md:hidden items-center gap-2">
+          <InstagramButton variant="header" showIconOnlyOnMobile={true} className="px-2.5 py-1.5 text-[11px]" />
+
           <Link
             href={
               currentUser?.role === 'artist'
@@ -221,6 +227,10 @@ export default function Navbar() {
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
         <div className="md:hidden border-t border-stone-200 bg-white px-4 py-4 space-y-2 shadow-xl animate-in slide-in-from-top-2 duration-200">
+          <div className="pb-1">
+            <InstagramButton variant="header" className="w-full justify-center py-2.5 text-xs shadow-xs" />
+          </div>
+
           {navLinks.map((item) => (
             <Link
               key={item.href}

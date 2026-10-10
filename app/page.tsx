@@ -17,9 +17,12 @@ import {
   Percent,
   Phone,
   Zap,
+  MessageCircle,
 } from 'lucide-react';
 import { useMarketplace } from '@/context/MarketplaceContext';
 import CommissionBadge from '@/components/CommissionBadge';
+import InstagramButton from '@/components/InstagramButton';
+import { getWhatsAppUrl, SOCIAL_CONFIG } from '@/lib/social-config';
 import { formatINR } from '@/lib/commission-calculator';
 
 export default function HomePage() {
@@ -448,6 +451,60 @@ export default function HomePage() {
               <span className="text-emerald-300 font-bold font-mono">05</span>
               <strong className="block text-white text-xs">Artist En Route</strong>
               <p className="text-[11px] text-emerald-200">Live GPS tracking & arrival ETA</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. CONTACT & OFFICIAL SOCIAL SECTION */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="bg-white rounded-3xl border border-stone-200 p-8 sm:p-10 shadow-sm grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div className="space-y-4">
+            <span className="text-[11px] font-bold uppercase tracking-wider text-[#88451b] bg-[#88451b]/10 px-3 py-1 rounded-full border border-[#88451b]/20">
+              Direct Contact & Socials
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-stone-900 font-serif">
+              Connect With Rang Riwaaz Mehandi
+            </h2>
+            <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
+              Explore our latest bridal design reels, dark organic stain results, and real bride videos on Instagram, or chat directly with our Gorakhpur booking desk on WhatsApp.
+            </p>
+
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
+              <InstagramButton variant="contact" />
+
+              <a
+                href={getWhatsAppUrl()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-2xl font-bold text-xs text-white bg-[#25D366] hover:bg-[#20ba5a] transition-all shadow-md hover:scale-102"
+              >
+                <MessageCircle className="w-4 h-4" />
+                <span>Chat on WhatsApp (+91 87565 49820)</span>
+              </a>
+            </div>
+          </div>
+
+          <div className="p-6 rounded-2xl bg-[#faf7f2] border border-stone-200 space-y-4 text-xs">
+            <h3 className="font-bold text-stone-900 text-sm font-serif">
+              Gorakhpur Central Booking Desk
+            </h3>
+            <div className="space-y-2 text-stone-600">
+              <p className="flex items-center gap-2">
+                <MapPin className="w-4 h-4 text-[#88451b] shrink-0" />
+                <span><strong>Center Hub:</strong> Baraipar Mod (Pincode: 273413), Gorakhpur</span>
+              </p>
+              <p className="flex items-center gap-2">
+                <Phone className="w-4 h-4 text-[#88451b] shrink-0" />
+                <span><strong>Support Line:</strong> +91 94500 00100</span>
+              </p>
+              <p className="flex items-center gap-2">
+                <Clock className="w-4 h-4 text-[#88451b] shrink-0" />
+                <span><strong>Service Hours:</strong> 8:00 AM – 10:00 PM (All 7 Days)</span>
+              </p>
+            </div>
+            <div className="p-3 bg-emerald-50 rounded-xl border border-emerald-200 text-emerald-900 text-[11px] font-medium">
+              💡 <strong>Instant WhatsApp Response:</strong> Get customized package quotes, bridal portrait consultations, and date availability within 15 minutes.
             </div>
           </div>
         </div>
