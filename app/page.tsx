@@ -42,27 +42,16 @@ export default function HomePage() {
     <div className="space-y-16 pb-16 text-left">
       {/* 1. CINEMATIC VIDEO HERO SECTION */}
       <section className="relative overflow-hidden min-h-[560px] sm:min-h-[640px] lg:min-h-[700px] flex items-center justify-center text-center text-white border-b border-[#c59b4e]/30 pt-12 pb-20 sm:py-24">
-        {/* Background Video & Bridal Backdrop */}
+        {/* Background Bridal Photo */}
         <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            poster="/assets/bride_hero.jpg"
+          <img
+            src="/assets/bride_hero.jpg"
+            alt="Rang Riwaaz Bridal Mehndi Art"
             className="w-full h-full object-cover object-center scale-105 transition-transform duration-1000"
-          >
-            <source src="/videos/hero_mehndi_bg.mp4" type="video/mp4" />
-            <source src="/videos/hero_mehndi_bg.webm" type="video/webm" />
-            <img
-              src="/assets/bride_hero.jpg"
-              alt="Rang Riwaaz Bridal Mehndi Art"
-              className="w-full h-full object-cover object-center"
-            />
-          </video>
+          />
 
           {/* Royal Dark Henna & Amber Glow Overlay for Readability */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[#1c0e05]/85 via-[#230f06]/70 to-[#0e1f13]/90 backdrop-blur-[0.5px]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#1c0e05]/80 via-[#230f06]/65 to-[#0e1f13]/85 backdrop-blur-[0.5px]" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(197,155,78,0.22)_0%,transparent_70%)] pointer-events-none" />
         </div>
 
