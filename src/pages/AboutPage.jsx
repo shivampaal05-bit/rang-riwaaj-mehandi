@@ -59,7 +59,6 @@ export default function AboutPage() {
         {/* Header / Hero */}
         <div className="text-center space-y-4 max-w-3xl mx-auto">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#163820]/10 border border-[#163820]/20 text-[#163820] text-xs font-bold uppercase tracking-wider">
-            <Sparkles className="w-3.5 h-3.5 text-[#c59b4e]" />
             <span>{isHi ? 'रंग रिवाज़ मेहंदी के बारे में' : 'About Rang Riwaaz Mehandi'}</span>
           </div>
 

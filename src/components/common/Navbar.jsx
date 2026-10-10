@@ -19,7 +19,7 @@ export default function Navbar() {
 
   const navLinks = [
     { to: '/', label: t('navHome') || 'Home', icon: Home },
-    { to: '/about', label: t('navAbout') || 'About', icon: Info },
+    { to: '/about', label: t('navAbout') || 'About', icon: null },
     { to: '/photos', label: t('navPhotos') || 'Photos', icon: Camera },
     { to: '/video', label: t('navVideo') || 'Video', icon: VideoIcon },
     { 
@@ -52,7 +52,7 @@ export default function Navbar() {
                 }`
               }
             >
-              <item.icon className="w-4 h-4 text-[#88451b]" />
+              {item.icon && <item.icon className="w-4 h-4 text-[#88451b]" />}
               <span>{item.label}</span>
               {item.badge && (
                 <span className="w-4 h-4 rounded-full bg-[#88451b] text-white text-[9px] font-extrabold flex items-center justify-center animate-pulse">
@@ -95,7 +95,7 @@ export default function Navbar() {
               }
             >
               <div className="flex items-center gap-3">
-                <item.icon className="w-4 h-4 text-[#88451b]" />
+                {item.icon && <item.icon className="w-4 h-4 text-[#88451b]" />}
                 <span>{item.label}</span>
               </div>
               {item.badge && (
