@@ -31,7 +31,7 @@ assert(translations.hi.step1 && translations.hi.step9, 'All 9 timeline steps tra
 // 2. Gorakhpur Localities Test
 assert(GORAKHPUR_LOCALITIES.length >= 10, `Found ${GORAKHPUR_LOCALITIES.length} Gorakhpur localities`);
 const betiahata = GORAKHPUR_LOCALITIES.find(l => l.id === 'betiahata');
-assert(betiahata && betiahata.distanceKm === 2.5, 'Betiahata locality mapped with correct distance');
+assert(betiahata && betiahata.distanceKm === 21.5, 'Betiahata locality mapped with correct distance from Baraipar Mod hub');
 
 // 3. Mock Artists Test
 assert(MOCK_ARTISTS.length >= 8, `Found ${MOCK_ARTISTS.length} realistic Gorakhpur artists`);
